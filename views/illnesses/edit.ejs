@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOME | Web page</title>
+</head>
+<body>
+<div id="block_top">
+  <div id="block_top_left">
+    <div id="block_top_left_img">
+
+    </div>
+    <div id="block_top_left_txt">
+      <a><h1 id="h1_top">Веб-тхнології та веб-дизайн</h1></a>
+      <h2>Військовий щпиталь</h2>
+    </div>
+  </div>
+  <div id="block_top_right">
+    <div id="block_top_right_buttons">
+      <div id="block_top_right_buttons_all">
+        <form action="/dashboard" method="get">
+          <button class="button_top" type="submit">Головна</button>
+        </form>
+        <form><a class="button_top" href="gallery.html">Галерея</a></form>
+        <form><a class="button_top" href="about.html">Про проект</a></form>
+        <a class="button_top" href="news.html">Новини</a>
+        <form><a class="button_top" href="https://www.google.com/maps/place/%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D1%82%D0%B5%D0%BB%D0%B5%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9+%D0%B8+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%93%D0%B5%D1%80%D0%BE%D0%B5%D0%B2+%D0%9A%D1%80%D1%83%D1%82/@50.4298323,30.5420565,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0c044dd735:0x77940fa521b6fd28!8m2!3d50.4298323!4d30.54424521">Контакти</a></form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="block_middle">
+  <div id="block_middle_info">
+    <div id="block_middle_info_inside">
+      <h2>Ласкаво просимо до веб-порталу військових шпиталів </h2>
+      <%- include('../header'); -%>
+      <div class="container">
+        <h3 class="yellow_txt"><a href="/illnesses">Список хвороб</a></h3>
+        <h1 class="yellow_txt">Редагувати хворобу</h1>
+        <form action="/illnesses/update/<%= illness._id%>" method="post">
+          <table>
+            <tbody>
+            <tr>
+              <td class="p_sing">Name</td>
+              <td><input class="txt_field" type="text" name="name" value="<%= illness.name %>" /></td>
+            </tr>
+            <tr>
+              <td class="p_sing">Symptoms</td>
+              <td><input class="txt_field"type="text" name="symptoms" value="<%= illness.symptoms %>" /></td>
+            </tr>
+            <tr>
+              <td class="p_sing">Healing</td>
+              <td><input class="txt_field" type="text" name="healing" value="<%= illness.healing %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button class="button_top_sing" type="submit">Update</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
+<div id="block_bottom">
+  <h1 class="h1_bot">© Проект розроблено курсантом 281 навчальної групи </h1>
+  <h1 class="h1_bot">КОВБА Руслан Володимирович</h1>
+</div>
+</body>
+</html>
