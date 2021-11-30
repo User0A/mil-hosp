@@ -58,13 +58,9 @@ app.use('/illnesses', require('./routes/illnesses.js'));
 app.use('/hospitals', require('./routes/hospitals.js'));
 app.use('/industries', require('./routes/industries.js'));
 app.use('/pills', require('./routes/pills.js'));
-app.use('/providers', require('./routes/providers.js'));
-app.use('/providerpills', require('./routes/providerpills.js'));
-app.use('/industryproviders', require('./routes/industryproviders.js'));
-app.use('/illnesshospitals', require('./routes/illnesshospitals.js'));
 
 let port = process.env.PORT;
 if (port==null || port=== ""){
     port = 3000;
 }
-app.listen(PORT, console.log(`Server running on  ${PORT}`));
+app.listen(port, console.log(`Server running on  ${port}`));
