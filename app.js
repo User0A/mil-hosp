@@ -63,6 +63,8 @@ app.use('/providerpills', require('./routes/providerpills.js'));
 app.use('/industryproviders', require('./routes/industryproviders.js'));
 app.use('/illnesshospitals', require('./routes/illnesshospitals.js'));
 
-const PORT = 11222;
-
+let port = process.env.PORT;
+if (port==null || port=== ""){
+    port = 3000;
+}
 app.listen(PORT, console.log(`Server running on  ${PORT}`));
